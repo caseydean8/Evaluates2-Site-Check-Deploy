@@ -109,7 +109,7 @@ class Header extends React.Component {
                     <Evaluates2RoundedCornersImage />
                   </StyledDImage>
                   <StyledLabel>
-                    (evaluates2)
+                    (evaluates2) test
                   </StyledLabel>
                 </SiteTitle>
                 <Nav />

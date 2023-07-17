@@ -1,6 +1,5 @@
 {
   "name": "evaluates2-site",
-  "homepage": "https://www.honesdalesales.com",
   "description": "website for evalutes2",
   "version": "0.0.1",
   "author": "Jim Lynch <jim.lynch@evaluates2.com>",
@@ -59,7 +58,7 @@
     "format": "eslint src --fix",
     "deploy-s3": "gatsby-plugin-s3 deploy --yes",
     "deploy-gh": "gh-pages -d public",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
     "type": "git",

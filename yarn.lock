@@ -8502,6 +8502,7 @@ __metadata:
     formik: ^1.5.8
     gatsby: ^2.1.4
     gatsby-image: ^2.0.29
+    gatsby-plugin-cname: ^1.0.0
     gatsby-plugin-create-client-paths: ^2.1.12
     gatsby-plugin-emotion: ^4.0.3
     gatsby-plugin-manifest: ^2.0.17
@@ -9837,6 +9838,15 @@ __metadata:
     lodash: ^4.17.20
     micromatch: ^4.0.2
   checksum: ddda2a92663fdaa903b1eaf6b68e2a74c6e65cd34496481592a7d83504b1ad292d8cb43db290b095b84884687e6b38f59cb5c1005971ed936c461be7dc159b28
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-cname@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "gatsby-plugin-cname@npm:1.0.0"
+  peerDependencies:
+    gatsby: ">2.0.0"
+  checksum: 21cd5a4c894a53de750524cb90e202baed3f654e619c46b4c357406241dd796a59849f0970d17d48d2a905c6cba2bfef73399942b699f1bddaadef06dc47270d
   languageName: node
   linkType: hard
 

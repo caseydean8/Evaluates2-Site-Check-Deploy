@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.development`,
 });
 
@@ -8,8 +8,9 @@ module.exports = {
     description: `Official Site for the software consultancy, Evaluates2.`,
     author: `Jim Lynch (jim.lynch@evaluates2.com)`,
     url: `https://evaluates2.com`,
+    siteUrl: 'https://www.honesdalesales.com/',
   },
-  pathPrefix: "/Evaluates2-Site-Check-Deploy",
+  // pathPrefix: "/Evaluates2-Site-Check-Deploy",
   plugins: [
     `gatsby-transformer-json`,
     {
@@ -45,14 +46,14 @@ module.exports = {
         icon: `src/data/logo.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-emotion",
+    'gatsby-plugin-emotion',
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "aaa-evaluates2-site-production",
-        protocol: "https",
-        hostname: "www.evaluates2.com",
+        bucketName: 'aaa-evaluates2-site-production',
+        protocol: 'https',
+        hostname: 'www.evaluates2.com',
         generateRoutingRules: true,
         generateIndexPageForRedirect: true,
       },
@@ -60,5 +61,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    'gatsby-plugin-cname',
   ],
 };

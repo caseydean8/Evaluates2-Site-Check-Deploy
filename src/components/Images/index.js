@@ -1,15 +1,16 @@
-import React from "react"
-import { ImagesContainer, 
-  BlackFrontCityOutline, 
-  DarkMiddleCityOutline, 
+import React from 'react';
+import {
+  ImagesContainer,
+  BlackFrontCityOutline,
+  DarkMiddleCityOutline,
   LightLibertyCityOutline,
   Clouds,
   Birds,
-  } from "./styles"
-import { StaticQuery, graphql } from "gatsby"
-import lightLibertyCityOutline from "../../data/lightLibertyCityOutline.png"
-import darkMiddleCityOutline from "../../data/darkMiddleCityOutline.png"
-import blackFrontCityOutline from "../../data/blackFrontCityOutline.png"
+} from './styles';
+import { StaticQuery, graphql } from 'gatsby';
+import lightLibertyCityOutline from '../../data/lightLibertyCityOutline.png';
+import darkMiddleCityOutline from '../../data/darkMiddleCityOutline.png';
+import blackFrontCityOutline from '../../data/blackFrontCityOutline.png';
 
 import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
@@ -25,46 +26,45 @@ export const ImageTitle = styled.div`
 `;
 
 export const Title = styled.div`
- h1#home-h {
+  h1#home-h {
+    color: white;
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: 'e2-Raleway-Extra-Bold';
+    margin-bottom: calc(13px + 2vw);
+    margin-top: calc(10px + 1vw);
+    letter-spacing: 0.5vw;
+    line-height: calc(21px + 9vw);
+    font-size: calc(16px + 8vw);
+    ${mediaQuery.maxNetbook} {
+      font-size: 70px;
+      line-height: 70px;
+    }
+    ${mediaQuery.maxPhone} {
+      font-size: 40px;
+    }
 
-color: white;
-font-size: 120px;
-line-height: 140px;
-font-weight: 800;
-text-align: center;
-letter-spacing: 5px;
-font-family: 'e2-Raleway-Extra-Bold';
-margin-bottom: calc(13px + 2vw);
-margin-top: calc(10px + 1vw);
-  letter-spacing: 0.5vw;
-  line-height: calc(21px + 9vw);
-  font-size: calc(16px + 8vw);
-${mediaQuery.maxNetbook} {
-  font-size: 70px;
-  line-height: 70px;
-}
-${mediaQuery.maxPhone} {
-  font-size: 40px;
-}
-
--webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
--moz-animation: fadein 1.5s; /* Firefox < 16 */
--ms-animation: fadein 1.5s; /* Internet Explorer */
--o-animation: fadein 1.5s; /* Opera < 12.1 */
-animation: fadein 1.5s;
-animation-timing-function: ease-in;
-animation-fill-mode: forwards;
-opacity: 0;
-
-@keyframes fadein {
-  from {
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
     opacity: 0;
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
-}
 `;
 
 export const Sub = styled.div`
@@ -105,57 +105,53 @@ export const Sub = styled.div`
 `;
 
 const Images = () => (
-    <StaticQuery
-        query={graphql`
-          query LOGO_DEFIMAGE_QUERY {
-            file(relativePath: { eq: "logo.png" }) {
-                childImageSharp {
-                  fixed(width: 1000) {
-                    ...GatsbyImageSharpFixed_tracedSVG
-                  }
-                }
+  <StaticQuery
+    query={graphql`
+      query LOGO_DEFIMAGE_QUERY {
+        file(relativePath: { eq: "logo.png" }) {
+          childImageSharp {
+            fixed(width: 1000) {
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
-        `}
-        render={data => (
-            <ImagesContainer>
-                <ImageTitle>
-                    <Title>
-                        <h1 id="home-h">
-                        Together,
-                        </h1>
-                        </Title>
-                    <Sub>we will build great things.</Sub>
-                </ImageTitle>
-                <LightLibertyCityOutline>
-                    <img src={lightLibertyCityOutline} alt="lightLibertyCityOutline" />
-                </LightLibertyCityOutline>
-                <DarkMiddleCityOutline>
-                    <img src={darkMiddleCityOutline} alt="darkMiddleCityOutline" />
-                </DarkMiddleCityOutline>
-                <BlackFrontCityOutline>
-                    <img src={blackFrontCityOutline} alt="blackFrontCityOutline" />
-                </BlackFrontCityOutline>
+        }
+      }
+    `}
+    render={data => (
+      <ImagesContainer>
+        <ImageTitle>
+          <Title>
+            <h1 id="home-h">Together,</h1>
+          </Title>
+          <Sub>we will build great things. deployed after push</Sub>
+        </ImageTitle>
+        <LightLibertyCityOutline>
+          <img src={lightLibertyCityOutline} alt="lightLibertyCityOutline" />
+        </LightLibertyCityOutline>
+        <DarkMiddleCityOutline>
+          <img src={darkMiddleCityOutline} alt="darkMiddleCityOutline" />
+        </DarkMiddleCityOutline>
+        <BlackFrontCityOutline>
+          <img src={blackFrontCityOutline} alt="blackFrontCityOutline" />
+        </BlackFrontCityOutline>
 
-                <Birds>
-                  {[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map((i) => (
-                    <div key={i}>
-                      <figure />
-                    </div>
-                  ))}
-                </Birds>
-                  
-                <Clouds>
-                  <div className='cloud cloud1' />
-                  <div className='cloud cloud2' />
-                  <div className='cloud cloud3' />
-                  <div className='cloud cloud4' />
-                </Clouds>
-                
-                
-            </ImagesContainer>
-        )}
-    />
-)
+        <Birds>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(i => (
+            <div key={i}>
+              <figure />
+            </div>
+          ))}
+        </Birds>
 
-export default Images
+        <Clouds>
+          <div className="cloud cloud1" />
+          <div className="cloud cloud2" />
+          <div className="cloud cloud3" />
+          <div className="cloud cloud4" />
+        </Clouds>
+      </ImagesContainer>
+    )}
+  />
+);
+
+export default Images;

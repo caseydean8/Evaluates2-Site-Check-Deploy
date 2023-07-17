@@ -104,7 +104,7 @@ class Header extends React.Component {
                     <Evaluates2RoundedCornersImage />
                   </StyledDImage>
                   <StyledLabel>
-                    (evaluates2) test deploy with CNAME file in static folder
+                    (evaluates2) test deploy gatsby-plugin-cname
                   </StyledLabel>
                 </SiteTitle>
                 <Nav />
